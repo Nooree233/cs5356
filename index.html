@@ -8,43 +8,43 @@
 </head>
 <body>
   <div class="container">
-    <header><h1>My Companion</h1></header>
-    <img src="bunny.jpg" alt="Bunny Companion" class="bunny-image" onclick="playMagicSound()">
-    <pre>Click me to hear something magical!</pre>
-    <p>This is my bunny buddy</p>
-    <p>She gives me lots of company</p>
-    <p>When I squish her, I feel stress free</p>
-    <p>She waits for me in my dormitory</p>
-    <p>How I love my bunny and me</p>
-
-    <audio id="magicSound">
-      <source src="magic.mp3" type="audio/mpeg"
-    </audio>
-
-    <script>
-      function playMagicSound() {
-        document.getElementById("magicSound").play();
-      }
-    </script>
-<button id="bunnyFactBtn">Fun Fact Fact About Bunnies</button>
-<p id="bunnyFact"></p>
-<script>
-  document.getElementById("bunnyFactBtn").addEventListener("click",async function() {
-    const response = await fetch("https://bunny-facts-api.herokuapp.com/facts/random");
-    const data = await response.json();
-    document.getElementById("bunnyFact").textContent = data.fact;
-  });
-</script>
+        <header><h1>My Companion</h1></header>
+        <img src="bunny.jpg" alt="Bunny Companion" class="bunny-image" onclick="playMagicSound()">
+        <pre>Click me to hear something magical!</pre>
+        <p>This is my bunny buddy</p>
+        <p>She gives me lots of company</p>
+        <p>When I squish her, I feel stress free</p>
+        <p>She waits for me in my dormitory</p>
+        <p>How I love my bunny and me</p>
     
+        <audio id="magicSound">
+          <source src="magic.mp3" type="audio/mpeg"
+        </audio>
+    
+        <script>
+          function playMagicSound() {
+            document.getElementById("magicSound").play();
+          }
+        </script>
+    <button id="bunnyFactBtn">Fun Fact Fact About Bunnies</button>
+    <p id="bunnyFact"></p>
+    <script>
+      document.getElementById("bunnyFactBtn").addEventListener("click",async function() {
+        const response = await fetch("https://bunny-facts-api.herokuapp.com/facts/random");
+        const data = await response.json();
+        document.getElementById("bunnyFact").textContent = data.fact;
+      });
+    </script>
+        
   
-<footer class = "footer-nav">
-      <nav>
-        <a href="https://www.linkedin.com/in/noor-el-hawwat" target="_blank">Noor EL-Hawwat</a>
-      </nav> 
-      <nav>
-        <a href="https://tech.cornell.edu" target="_blank">Cornell Tech</a>
-      </nav> 
-</footer>
-</div>
+    <footer class = "footer-nav">
+          <nav>
+            <a href="https://www.linkedin.com/in/noor-el-hawwat" target="_blank">Noor EL-Hawwat</a>
+          </nav> 
+          <nav>
+            <a href="https://tech.cornell.edu" target="_blank">Cornell Tech</a>
+          </nav> 
+    </footer>
+  </div>
 </body>
 </html>
