@@ -15,6 +15,8 @@ body {
 header {
   font-family: Arial, sans-serif;
   background-color: white;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 p {
