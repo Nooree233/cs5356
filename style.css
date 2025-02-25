@@ -14,14 +14,16 @@ body {
 
 header {
   font-family: Arial, sans-serif;
-  background-color: white;
+  background-color: #E8F4E9;
+  width: 100%;
+  display: block;
   padding: 20px;
   border-radius: 5px;
 }
 
 p {
   font-family: "Segoe Script", cursive;
-  background-color: white;
+  background-color: #E8F4E9;
   padding: 10px;
   border-radius: 5px;
 }
