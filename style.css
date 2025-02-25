@@ -6,7 +6,10 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #fbf9fb;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 h1 {
