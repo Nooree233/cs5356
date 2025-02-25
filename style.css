@@ -14,7 +14,12 @@ h1 {
 }
 
 p {
-  font-family: "Brush Script MT", cursive;
+  font-family: "Dancing Script", cursive;
+}
+
+pre {
+  font-style: italic;
+  color: grey;
 }
 
 container {
