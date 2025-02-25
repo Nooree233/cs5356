@@ -34,7 +34,7 @@ pre {
   font-style: italic;
   color: grey;
   background-color: white;
-  max width: 80%;
+  max-width: 80%;
 }
 
 container {
