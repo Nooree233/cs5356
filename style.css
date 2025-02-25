@@ -36,6 +36,7 @@ container {
   gap: 10px;
   font-size: 14px;
   margin-top: 20px;
+  font-family: Arial, sans-serif;
 }
 
 .footer-nav nav a {
