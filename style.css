@@ -10,6 +10,10 @@ body {
   background-color: #fbf9fb;
 }
 
+h1 {
+  font-family: Arial, sans-serif;
+}
+
 container {
   display: felx;
   flex-direction: column;
