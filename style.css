@@ -27,6 +27,7 @@ p {
 pre {
   font-style: italic;
   color: grey;
+  background-color: white;
 }
 
 container {
