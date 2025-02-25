@@ -27,12 +27,14 @@ p {
   background-color: #E8F4E9;
   padding: 10px;
   border-radius: 5px;
+  max-width: 80%;
 }
 
 pre {
   font-style: italic;
   color: grey;
   background-color: white;
+  max width: 80%;
 }
 
 container {
