@@ -14,8 +14,9 @@ body {
 
 header {
   font-family: Arial, sans-serif;
+  text-align: center;
   background-color: #E8F4E9;
-  width: 100%;
+  width: 100vw;
   display: block;
   padding: 20px;
   border-radius: 5px;
