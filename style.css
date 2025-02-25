@@ -14,10 +14,14 @@ body {
 
 header {
   font-family: Arial, sans-serif;
+  background-color: white;
 }
 
 p {
   font-family: "Segoe Script", cursive;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 pre {
