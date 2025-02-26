@@ -44,3 +44,16 @@ document.getElementById("bunnyGifBtn").addEventListener("click", async function(
         document.getElementById("bunnyGif").textContent = "Sorry, couldn't fetch a bunny image!";
     }
 });
+
+// Button Color Change on Click Using MouseEvent
+document.getElementById("bunnyGifBtn").addEventListener("mousedown", function(event) {
+    if (event instanceof MouseEvent) {
+        this.style.backgroundColor = "#3d8f44"; // Change to darker green when clicked
+    }
+});
+
+document.getElementById("bunnyGifBtn").addEventListener("mouseup", function(event) {
+    if (event instanceof MouseEvent) {
+        this.style.backgroundColor = "#8fd095"; // Revert to original green when released
+    }
+});
