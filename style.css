@@ -4,15 +4,16 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Ensure elements are stacked vertically */
-  justify-content: space-between; /* Push footer to the bottom */
-  min-height: 100vh; /* Ensure full height of viewport */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Push footer to bottom */
+  min-height: 100vh; /* Ensure body takes full viewport height */
   background-image: url('bg1.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  width: 100vw; /* Ensure the body does not expand beyond the screen */
+  width: 100vw; /* Ensure body does not expand beyond the viewport */
+  box-sizing: border-box;
 }
 
 /* Main Container */
@@ -24,10 +25,10 @@ body {
   width: 100%;
   max-width: 800px;
   padding: 30px;
-  margin: 40px auto;
+  margin: auto;
   border-radius: 10px;
-  flex-grow: 1; /* Allow content to grow and fill space */
-  box-sizing: border-box; /* Ensures padding does not cause overflow */
+  flex-grow: 1; /* Allow content to fill available space */
+  box-sizing: border-box;
 }
 
 /* Heading */
@@ -48,7 +49,7 @@ p {
   background-color: #E8F4E9;
   padding: 10px;
   border-radius: 5px;
-  max-width: 80%; /* Prevents text from going too wide */
+  max-width: 80%; /* Prevents text from becoming too wide */
   text-align: center;
   margin: 10px auto;
   box-sizing: border-box;
@@ -63,6 +64,35 @@ p {
   cursor: pointer;
 }
 
+/* Pre (Text with White Background) */
+pre {
+  font-style: italic;
+  color: grey;
+  background-color: white;
+  padding: 10px;
+  max-width: 80%;
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 5px;
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+/* Button */
+button {
+  display: block;
+  margin: 15px auto;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #8fd095;
+  color: black;
+  border-radius: 5px;
+}
+
 /* Footer Navigation */
 .footer-nav {
   display: flex;
@@ -71,11 +101,12 @@ p {
   gap: 10px;
   font-size: 14px;
   font-family: Arial, sans-serif;
-  background-color: #8fd095; /* Footer background */
-  padding: 10px 0;
-  width: 100%; /* Ensure footer is always full-width */
-  margin-top: auto; /* Push to the bottom */
+  background-color: #8fd095; /* Green footer background */
+  padding: 20px 0; /* More padding for better visibility */
+  width: 100%; /* Full width */
+  margin-top: auto; /* Push footer to the bottom */
   box-sizing: border-box;
+  position: relative; /* Ensure it remains part of the document flow */
 }
 
 /* Footer Links */
@@ -98,6 +129,6 @@ p {
 
   .container {
     padding: 20px;
-    margin: 20px auto;
+    margin: auto;
   }
 }
