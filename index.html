@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GF2J36SG52"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GF2J36SG52');
-</script>
-
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GF2J36SG52');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Companion</title>
@@ -30,31 +29,25 @@
   <div class="container">
     <h1>My Companion</h1>
     
-    <!-- Bunny Image with Sound Effect -->
     <img src="bunny.jpg" alt="Bunny Companion" class="bunny-image" onclick="playMagicSound()">
     <pre>Click the bunny to hear something magical!</pre>
 
-    <!-- Bunny Poem -->
     <p>This is my bunny buddy</p>
     <p>She gives me lots of company</p>
     <p>When I squish her, I feel stress-free</p>
     <p>She waits for me in my dormitory</p>
     <p>How I love my bunny and me</p>
 
-    <!-- Audio for Magic Sound -->
     <audio id="magicSound">
       <source src="magic.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Bunny Fact Button -->
     <button id="bunnyGifBtn">Click to see more bunnies!</button>
     <p id="bunnyGif"></p>
 
-    <!-- Footer with Links -->
     <footer class="footer-nav">
       <article style="color: black; font-style: italic;">
         The &ltaudio&gt HTML element taught me how simple the process takes to apply the mp3 file I uploaded to give the photo a sound with the playMagicSound() function. I learned the minimal amount of code that it takes to use this element on HTML and JavaScript and how it doesn't let the noise overlap when I click the button multiple times.
-
         The &ltbackground&gt CSS element taught me how to put a background image in my website. I learned the ease of applying a file in my repository into background-image, centering the image on the website through background-position, and keeping the image in place by setting background-attachment to fixed.
       </article>
       <nav>
@@ -66,7 +59,6 @@
     </footer>
   </div>
 
-  <!-- JavaScript File -->
   <script src="script.js"></script>
 </body>
 </html>
