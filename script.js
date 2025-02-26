@@ -18,7 +18,15 @@ document.getElementById("bunnyGifBtn").addEventListener("click", async function(
         // Extract bunny image URL
         let imageUrl = data.media.gif || data.media.poster || data.media.png;
 
-        // Create or update the image element
+        // Get or create the image container
+        let imageContainer = document.getElementById("bunnyImageContainer");
+        if (!imageContainer) {
+            imageContainer = document.createElement("div");
+            imageContainer.id = "bunnyImageContainer";
+            document.getElementById("bunnyFactBtn").after(imageContainer); // Insert after the button
+        }
+
+        // Update or create the bunny image element
         let bunnyImageElement = document.getElementById("bunnyImage");
         if (!bunnyImageElement) {
             bunnyImageElement = document.createElement("img");
@@ -26,8 +34,9 @@ document.getElementById("bunnyGifBtn").addEventListener("click", async function(
             bunnyImageElement.style.maxWidth = "300px";
             bunnyImageElement.style.marginTop = "15px";
             bunnyImageElement.style.borderRadius = "10px";
-            document.body.appendChild(bunnyImageElement);
+            imageContainer.appendChild(bunnyImageElement);
         }
+
         bunnyImageElement.src = imageUrl;
         bunnyImageElement.alt = "Cute Bunny";
     } catch (error) {
