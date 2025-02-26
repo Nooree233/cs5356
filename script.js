@@ -47,7 +47,12 @@ document.getElementById("bunnyGifBtn").addEventListener("click", async function(
   }
 });
 
-// Change Button Color to #3d8f44 on Click using MouseEvent
+// Toggle Button Color on Click using MouseEvent
 document.getElementById("bunnyGifBtn").addEventListener("click", function(event) {
-  event.target.style.backgroundColor = "#3d8f44"; // Change color on click
+  let btn = event.target;
+  if (btn.style.backgroundColor === "rgb(61, 143, 68)") { // #3d8f44 in RGB format
+    btn.style.backgroundColor = "#8fd095"; // Change back to original color
+  } else {
+    btn.style.backgroundColor = "#3d8f44"; // Change to clicked color
+  }
 });
