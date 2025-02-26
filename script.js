@@ -1,33 +1,27 @@
-// Play Magic Sound When Bunny is Clicked
 function playMagicSound() {
     let audio = document.getElementById("magicSound");
-    audio.load(); // Reload to ensure it plays from the start
+    audio.load(); 
     audio.play()
         .catch(error => console.log("Audio play failed:", error));
 }
 
-// Bunny Image API URL
 const BUNNY_IMAGE_API = "https://api.bunnies.io/v2/loop/random/?media=gif,png";
 
-// Button Click Event: Fetch & Display Bunny Image
 document.getElementById("bunnyGifBtn").addEventListener("click", async function() {
   try {
-    // Fetch the bunny GIF data
+    
     const response = await fetch(BUNNY_IMAGE_API);
     const data = await response.json();
 
-    // Extract the bunny image URL (could be gif or png)
     let imageUrl = data.media.gif || data.media.poster || data.media.png;
 
-    // Get or create the image container
     let imageContainer = document.getElementById("bunnyImageContainer");
     if (!imageContainer) {
       imageContainer = document.createElement("div");
       imageContainer.id = "bunnyImageContainer";
-      document.getElementById("bunnyGifBtn").after(imageContainer); // Insert after the button
+      document.getElementById("bunnyGifBtn").after(imageContainer); 
     }
 
-    // Update or create the bunny image element
     let bunnyImageElement = document.getElementById("bunnyImage");
     if (!bunnyImageElement) {
       bunnyImageElement = document.createElement("img");
@@ -38,7 +32,6 @@ document.getElementById("bunnyGifBtn").addEventListener("click", async function(
       imageContainer.appendChild(bunnyImageElement);
     }
 
-    // Set the image source to the fetched bunny image
     bunnyImageElement.src = imageUrl;
     bunnyImageElement.alt = "Cute Bunny";
   } catch (error) {
@@ -47,12 +40,11 @@ document.getElementById("bunnyGifBtn").addEventListener("click", async function(
   }
 });
 
-// Toggle Button Color on Click using MouseEvent
 document.getElementById("bunnyGifBtn").addEventListener("click", function(event) {
   let btn = event.target;
-  if (btn.style.backgroundColor === "rgb(61, 143, 68)") { // #3d8f44 in RGB format
-    btn.style.backgroundColor = "#8fd095"; // Change back to original color
+  if (btn.style.backgroundColor === "rgb(61, 143, 68)") { 
+    btn.style.backgroundColor = "#8fd095";
   } else {
-    btn.style.backgroundColor = "#3d8f44"; // Change to clicked color
+    btn.style.backgroundColor = "#3d8f44"; 
   }
 });
