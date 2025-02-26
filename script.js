@@ -10,7 +10,7 @@ function playMagicSound() {
 const BUNNY_IMAGE_API = "https://api.bunnies.io/v2/loop/random/?media=gif,png";
 
 // Button Click Event: Fetch & Display Bunny Image
-document.getElementById("bunnyFactBtn").addEventListener("click", async function() {
+document.getElementById("bunnyGifBtn").addEventListener("click", async function() {
     try {
         const response = await fetch(BUNNY_IMAGE_API);
         const data = await response.json();
