@@ -45,15 +45,26 @@ document.getElementById("bunnyGifBtn").addEventListener("click", async function(
     }
 });
 
-// Button Color Change on Click Using MouseEvent
-document.getElementById("bunnyGifBtn").addEventListener("mousedown", function(event) {
-    if (event instanceof MouseEvent) {
-        this.style.backgroundColor = "#3d8f44"; // Change to darker green when clicked
-    }
-});
+// Button Color Change on Click (Supports Both Mouse & Touch Events)
+const button = document.getElementById("bunnyGifBtn");
 
-document.getElementById("bunnyGifBtn").addEventListener("mouseup", function(event) {
-    if (event instanceof MouseEvent) {
-        this.style.backgroundColor = "#8fd095"; // Revert to original green when released
-    }
-});
+// Function to change button color when pressed
+function changeButtonColor(event) {
+    event.preventDefault(); // Prevents weird touch behavior on mobile
+    button.style.backgroundColor = "#3d8f44"; // Dark green when pressed
+}
+
+// Function to revert button color when released
+function resetButtonColor(event) {
+    event.preventDefault();
+    button.style.backgroundColor = "#8fd095"; // Original green
+}
+
+// Attach both mouse and touch event listeners
+button.addEventListener("mousedown", changeButtonColor);
+button.addEventListener("mouseup", resetButtonColor);
+button.addEventListener("mouseleave", resetButtonColor); // Ensures color resets if mouse leaves
+
+button.addEventListener("touchstart", changeButtonColor);
+button.addEventListener("touchend", resetButtonColor);
+button.addEventListener("touchcancel", resetButtonColor);
