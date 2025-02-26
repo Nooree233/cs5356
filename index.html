@@ -8,47 +8,40 @@
 </head>
 <body>
   <div class="container">
-        <h1>My Companion</h1>
-        <img src="bunny.jpg" alt="Bunny Companion" class="bunny-image" onclick="playMagicSound()">
-        <pre>Click the bunny to hear something magical!</pre>
-        <p>This is my bunny buddy</p>
-        <p>She gives me lots of company</p>
-        <p>When I squish her, I feel stress free</p>
-        <p>She waits for me in my dormitory</p>
-        <p>How I love my bunny and me</p>
+    <h1>My Companion</h1>
     
-        <audio id="magicSound">
-          <source src="magic.mp3" type="audio/mpeg"
-        </audio>
     
-        <script>
-          function playMagicSound() {
-            document.getElementById("magicSound").play();
-          }
-        </script>
-    <button id="bunnyFactBtn">Fun Fact Fact About Bunnies</button>
-      <p id="bunnyFact"></p>
-    <script>
-      document.getElementById("bunnyFactBtn").addEventListener("click", async function() {
-    try {
-      const response = await fetch("https://api.bunnies.io/v2/loop/random/?media=gif");
-      const data = await response.json();
-      document.getElementById("bunnyFact").textContent = "Fun Fact: Bunnies are social animals and love to play!";
-    } catch (error) {
-      document.getElementById("bunnyFact").textContent = "Sorry, couldn't fetch a bunny fact!";
-      console.error("API Fetch Error:", error);
-    }
-    </script>
-        
+    <img src="bunny.jpg" alt="Bunny Companion" class="bunny-image" onclick="playMagicSound()">
+    <pre>Click the bunny to hear something magical!</pre>
+
+    
+    <p>This is my bunny buddy</p>
+    <p>She gives me lots of company</p>
+    <p>When I squish her, I feel stress-free</p>
+    <p>She waits for me in my dormitory</p>
+    <p>How I love my bunny and me</p>
+
   
-    <footer class = "footer-nav">
-          <nav>
-            <a href="https://www.linkedin.com/in/noor-el-hawwat" target="_blank">Noor EL-Hawwat</a>
-          </nav> 
-          <nav>
-            <a href="https://tech.cornell.edu" target="_blank">Cornell Tech</a>
-          </nav> 
+    <audio id="magicSound">
+      <source src="magic.mp3" type="audio/mpeg">
+    </audio>
+
+    
+    <button id="bunnyFactBtn">Fun Fact About Bunnies</button>
+    <p id="bunnyFact"></p>
+
+    
+    <footer class="footer-nav">
+      <nav>
+        <a href="https://www.linkedin.com/in/noor-el-hawwat" target="_blank">Noor El-Hawwat</a>
+      </nav>
+      <nav>
+        <a href="https://tech.cornell.edu" target="_blank">Cornell Tech</a>
+      </nav>
     </footer>
   </div>
+
+  
+  <script src="script.js"></script>
 </body>
 </html>
