@@ -23,7 +23,7 @@ document.getElementById("bunnyGifBtn").addEventListener("click", async function(
         if (!imageContainer) {
             imageContainer = document.createElement("div");
             imageContainer.id = "bunnyImageContainer";
-            document.getElementById("bunnyFactBtn").after(imageContainer); // Insert after the button
+            document.getElementById("bunnyGifBtn").after(imageContainer); // Insert after the button
         }
 
         // Update or create the bunny image element
