@@ -1,44 +1,37 @@
 // Play Magic Sound When Bunny is Clicked
 function playMagicSound() {
     let audio = document.getElementById("magicSound");
-    audio.load();  // Reload to ensure it plays from the start
+    audio.load(); // Reload to ensure it plays from the start
     audio.play()
         .catch(error => console.log("Audio play failed:", error));
 }
 
-// Predefined Bunny Facts (Fallback)
-const fallbackFacts = [
-    "Bunnies can rotate their ears 180 degrees!",
-    "A rabbit’s teeth never stop growing.",
-    "Bunnies love to do a special jump called a 'binky' when they're happy!",
-    "Rabbits purr when they are content, just like cats!",
-    "A baby rabbit is called a kit, and a group of rabbits is called a fluffle!",
-    "Bunnies have nearly 360-degree vision, but they have a blind spot in front of their nose.",
-    "A rabbit’s diet should be 80% hay to keep their teeth and digestion healthy."
-];
+// Bunny Image API URL
+const BUNNY_IMAGE_API = "https://api.bunnies.io/v2/loop/random/?media=gif,png";
 
-// Bunny Fact API URL (Fallback if API Fails)
-const BUNNY_FACT_API = "https://meowfacts.herokuapp.com/";  // This actually returns random facts
-
+// Button Click Event: Fetch & Display Bunny Image
 document.getElementById("bunnyFactBtn").addEventListener("click", async function() {
     try {
-        const response = await fetch(BUNNY_FACT_API);
+        const response = await fetch(BUNNY_IMAGE_API);
         const data = await response.json();
 
-        // Extract fact from API (Note: This API actually returns cat facts, but replace with a bunny fact API if found)
-        let fact = data.data ? data.data[0] : null;
+        // Extract bunny image URL
+        let imageUrl = data.media.gif || data.media.poster || data.media.png;
 
-        if (!fact || fact.toLowerCase().includes("cat")) {
-            // Use a fallback fact if the API gives irrelevant data
-            fact = fallbackFacts[Math.floor(Math.random() * fallbackFacts.length)];
+        // Create or update the image element
+        let bunnyImageElement = document.getElementById("bunnyImage");
+        if (!bunnyImageElement) {
+            bunnyImageElement = document.createElement("img");
+            bunnyImageElement.id = "bunnyImage";
+            bunnyImageElement.style.maxWidth = "300px";
+            bunnyImageElement.style.marginTop = "15px";
+            bunnyImageElement.style.borderRadius = "10px";
+            document.body.appendChild(bunnyImageElement);
         }
-
-        document.getElementById("bunnyFact").textContent = `Fun Fact: ${fact}`;
+        bunnyImageElement.src = imageUrl;
+        bunnyImageElement.alt = "Cute Bunny";
     } catch (error) {
         console.error("API Fetch Error:", error);
-
-        // Use a fallback fact if API fails
-        let randomFallbackFact = fallbackFacts[Math.floor(Math.random() * fallbackFacts.length)];
-        document.getElementById("bunnyFact").textContent = `Fun Fact: ${randomFallbackFact}`;
+        document.getElementById("bunnyFact").textContent = "Sorry, couldn't fetch a bunny image!";
     }
 });
