@@ -4,9 +4,9 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Ensure elements are stacked vertically */
-  justify-content: space-between; /* Ensure space is used between the content and footer */
-  min-height: 100vh; /* Ensure body takes up the full height of the viewport */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background-image: url('bg1.png');
   background-size: cover;
   background-position: center;
@@ -24,7 +24,64 @@ body {
   padding: 30px;
   margin: 40px auto;
   border-radius: 10px;
-  flex-grow: 1; /* Allow container to grow and fill available space */
+}
+
+/* Heading */
+h1 {
+  font-family: Arial, sans-serif;
+  background-color: #E8F4E9;
+  width: 100vw;
+  display: block;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Paragraphs */
+p {
+  font-family: "Segoe Script", cursive;
+  background-color: #E8F4E9;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 50%;
+  text-align: center;
+  margin: 10px auto;
+}
+
+/* Image */
+.bunny-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* Pre (Text with White Background) */
+pre {
+  font-style: italic;
+  color: grey;
+  background-color: white;  /* White Background Added */
+  padding: 10px;
+  max-width: 50%;
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 5px;
+  display: block; 
+  white-space: pre-wrap; 
+  word-wrap: break-word;
+}
+
+/* Button */
+button {
+  display: block;
+  margin: 15px auto;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #8fd095;
+  color: black;  /* Improved contrast */
+  border-radius: 5px;
 }
 
 /* Footer Navigation */
@@ -34,12 +91,10 @@ body {
   justify-content: center;
   gap: 10px;
   font-size: 14px;
+  margin-top: 20px;
   font-family: Arial, sans-serif;
-  background-color: #8fd095; /* Footer background color */
-  padding: 10px 0; /* Padding for spacing */
-  width: 100vw; /* Stretch across the full width of the screen */
-  left: 0; /* Ensure it starts at the left side */
-  margin-top: auto; /* Push the footer to the bottom */
+  background-color: #8fd095; /* Add background color here */
+  padding: 10px 0; /* Optionally add padding for spacing */
 }
 
 /* Footer Links */
