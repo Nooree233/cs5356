@@ -93,6 +93,8 @@ button {
   font-size: 14px;
   margin-top: 20px;
   font-family: Arial, sans-serif;
+  background-color: #8fd095; /* Add background color here */
+  padding: 10px 0; /* Optionally add padding for spacing */
 }
 
 /* Footer Links */
@@ -113,3 +115,4 @@ button {
     align-items: center;
   }
 }
+
