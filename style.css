@@ -44,6 +44,9 @@ pre {
   padding: 10px;
   margin: 10px auto;
   border-radius: 5px;
+  display: block; 
+  white-space: pre-wrap; 
+  word-wrap: break-word;
 }
 
 .container {
