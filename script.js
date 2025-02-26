@@ -41,6 +41,6 @@ document.getElementById("bunnyGifBtn").addEventListener("click", async function(
         bunnyImageElement.alt = "Cute Bunny";
     } catch (error) {
         console.error("API Fetch Error:", error);
-        document.getElementById("bunnyFact").textContent = "Sorry, couldn't fetch a bunny image!";
+        document.getElementById("bunnyGif").textContent = "Sorry, couldn't fetch a bunny image!";
     }
 });
