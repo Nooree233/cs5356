@@ -1,22 +1,20 @@
-/* General Page Styles */
 body {
   text-align: center;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  justify-content: space-between; /* Push footer to bottom */
-  min-height: 100vh; /* Ensure body takes full viewport height */
+  flex-direction: column; 
+  justify-content: space-between; 
+  min-height: 100vh; 
   background-image: url('bg1.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  width: 100vw; /* Ensure body does not expand beyond the viewport */
+  overflow-x: hidden; 
+  width: 100vw; 
   box-sizing: border-box;
 }
 
-/* Main Container */
 .container {
   display: flex;
   flex-direction: column;
@@ -27,11 +25,10 @@ body {
   padding: 30px;
   margin: auto;
   border-radius: 10px;
-  flex-grow: 1; /* Allow content to fill available space */
+  flex-grow: 1; 
   box-sizing: border-box;
 }
 
-/* Heading */
 h1 {
   font-family: Arial, sans-serif;
   background-color: #E8F4E9;
@@ -43,19 +40,17 @@ h1 {
   box-sizing: border-box;
 }
 
-/* Paragraphs */
 p {
   font-family: "Segoe Script", cursive;
   background-color: #E8F4E9;
   padding: 10px;
   border-radius: 5px;
-  max-width: 80%; /* Prevents text from becoming too wide */
+  max-width: 80%; 
   text-align: center;
   margin: 10px auto;
   box-sizing: border-box;
 }
 
-/* Image */
 .bunny-image {
   width: 100%;
   max-width: 300px;
@@ -64,7 +59,6 @@ p {
   cursor: pointer;
 }
 
-/* Pre (Text with White Background) */
 pre {
   font-style: italic;
   color: grey;
@@ -80,7 +74,6 @@ pre {
   box-sizing: border-box;
 }
 
-/* Button */
 button {
   display: block;
   margin: 15px auto;
@@ -91,17 +84,15 @@ button {
   background-color: #8fd095;
   color: black;
   border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Shadow below the button */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Button Hover Effect */
 button:hover {
-  transform: translateY(-2px); /* Slight lift effect */
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25); 
 }
 
-/* Footer Navigation */
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
@@ -109,15 +100,14 @@ button:hover {
   gap: 10px;
   font-size: 14px;
   font-family: Arial, sans-serif;
-  background-color: #8fd095; /* Green footer background */
-  padding: 20px 0; /* More padding for better visibility */
-  width: 100%; /* Full width */
-  margin-top: auto; /* Push footer to the bottom */
+  background-color: #8fd095; 
+  padding: 20px 0; 
+  width: 100%; 
+  margin-top: auto; 
   box-sizing: border-box;
-  position: relative; /* Ensure it remains part of the document flow */
+  position: relative; 
 }
 
-/* Footer Links */
 .footer-nav nav a {
   text-decoration: none;
   color: #0077b5;
@@ -130,10 +120,9 @@ button:hover {
 
 * Mobile responsiveness */
 @media (max-width: 480px) {
-  /* Ensure button is visible and responsive */
   button {
-    width: 80%;  /* Adjust the width on mobile to prevent overflow */
-    font-size: 14px;  /* Adjust font size for mobile */
+    width: 80%;  
+    font-size: 14px;  
   }
 
   .container {
