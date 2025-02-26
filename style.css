@@ -4,16 +4,16 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Push footer to bottom */
+  min-height: 100vh; /* Ensure body takes full viewport height */
   background-image: url('bg1.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100vw; /* Ensure body does not expand beyond the viewport */
+  box-sizing: border-box;
 }
 
 /* Main Container */
@@ -25,8 +25,10 @@ body {
   width: 100%;
   max-width: 800px;
   padding: 30px;
-  margin: 40px auto;
+  margin: auto;
   border-radius: 10px;
+  flex-grow: 1; /* Allow content to fill available space */
+  box-sizing: border-box;
 }
 
 /* Heading */
@@ -34,8 +36,11 @@ h1 {
   font-family: Arial, sans-serif;
   background-color: #E8F4E9;
   width: 100%;
+  max-width: 800px;
+  display: block;
   padding: 20px;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 /* Paragraphs */
@@ -44,9 +49,10 @@ p {
   background-color: #E8F4E9;
   padding: 10px;
   border-radius: 5px;
-  max-width: 50%;
+  max-width: 80%; /* Prevents text from becoming too wide */
   text-align: center;
   margin: 10px auto;
+  box-sizing: border-box;
 }
 
 /* Image */
@@ -64,13 +70,14 @@ pre {
   color: grey;
   background-color: white;
   padding: 10px;
-  max-width: 50%;
+  max-width: 80%;
   text-align: center;
   margin: 10px auto;
   border-radius: 5px;
-  display: block; 
-  white-space: pre-wrap; 
+  display: block;
+  white-space: pre-wrap;
   word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 /* Button */
@@ -84,29 +91,30 @@ button {
   background-color: #8fd095;
   color: black;
   border-radius: 5px;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); /* Added shadow effect */
-  transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth transition */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Shadow below the button */
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Button Active (Clicked) State */
-button:active {
-  background-color: #3d8f44;
-  transform: scale(0.98); /* Slight press effect */
+/* Button Hover Effect */
+button:hover {
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
 }
 
-/* Footer */
+/* Footer Navigation */
 .footer-nav {
-  background-color: #8fd095;
-  width: 100vw;
-  padding: 15px 0;
-  text-align: center;
-  position: relative;
-  bottom: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   font-size: 14px;
   font-family: Arial, sans-serif;
+  background-color: #8fd095; /* Green footer background */
+  padding: 20px 0; /* More padding for better visibility */
+  width: 100%; /* Full width */
+  margin-top: auto; /* Push footer to the bottom */
+  box-sizing: border-box;
+  position: relative; /* Ensure it remains part of the document flow */
 }
 
 /* Footer Links */
@@ -120,27 +128,16 @@ button:active {
   text-decoration: underline;
 }
 
-/* Remove White Square (Unwanted Empty Elements) */
-img:empty,
-div:empty {
-  display: none;
-}
-
-/* Ensure Full Page Layout */
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* Mobile Responsiveness */
+* Mobile responsiveness */
 @media (max-width: 480px) {
-  .footer-nav {
-    flex-direction: column;
-    align-items: center;
+  /* Ensure button is visible and responsive */
+  button {
+    width: 80%;  /* Adjust the width on mobile to prevent overflow */
+    font-size: 14px;  /* Adjust font size for mobile */
   }
 
-  p, pre {
-    max-width: 80%; /* Increase width for better mobile view */
+  .container {
+    padding: 20px;
+    margin: auto;
   }
 }
