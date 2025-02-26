@@ -29,11 +29,15 @@
     <button id="bunnyFactBtn">Fun Fact Fact About Bunnies</button>
       <p id="bunnyFact"></p>
     <script>
-      document.getElementById("bunnyFactBtn").addEventListener("click",async function() {
-        const response = await fetch("https://bunny-facts-api.herokuapp.com/facts/random");
-        const data = await response.json();
-        document.getElementById("bunnyFact").textContent = data.fact;
-      });
+      document.getElementById("bunnyFactBtn").addEventListener("click", async function() {
+    try {
+      const response = await fetch("https://api.bunnies.io/v2/loop/random/?media=gif");
+      const data = await response.json();
+      document.getElementById("bunnyFact").textContent = "Fun Fact: Bunnies are social animals and love to play!";
+    } catch (error) {
+      document.getElementById("bunnyFact").textContent = "Sorry, couldn't fetch a bunny fact!";
+      console.error("API Fetch Error:", error);
+    }
     </script>
         
   
