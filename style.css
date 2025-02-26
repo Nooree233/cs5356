@@ -1,3 +1,4 @@
+
 body {
   text-align: center;
   margin: 0;
@@ -6,48 +7,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url('bg1.png');
+  background-image: url('bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
-h1 {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #E8F4E9;
-  width: 100vw;
-  display: block;
-  padding: 20px;
-  border-radius: 5px;
-}
-
-p {
-  font-family: "Segoe Script", cursive;
-  background-color: #E8F4E9;
-  padding: 10px;
-  border-radius: 5px;
-  max-width: 50%;
-  text-align: center;
-  padding: 10px;
-  margin: 10px auto;
-  border-radius: 5px;
-}
-
-pre {
-  font-style: italic;
-  color: grey;
-  background-color: white;
-  padding: 10px;
-  max-width: 50%;
-  text-align: center;
-  padding: 10px;
-  margin: 10px auto;
-  border-radius: 5px;
-  display: block; 
-  white-space: pre-wrap; 
-  word-wrap: break-word;
-}
 
 .container {
   display: flex;
@@ -61,12 +26,36 @@ pre {
   border-radius: 10px;
 }
 
+
+h1 {
+  font-family: Arial, sans-serif;
+  background-color: #E8F4E9;
+  width: 100vw;
+  display: block;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+p {
+  font-family: "Segoe Script", cursive;
+  background-color: #E8F4E9;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 50%;
+  text-align: center;
+  margin: 10px auto;
+}
+
+
 .bunny-image {
   width: 100%;
   max-width: 300px;
   height: auto;
   border-radius: 15px;
+  cursor: pointer;
 }
+
 
 button {
   display: block;
@@ -76,9 +65,10 @@ button {
   cursor: pointer;
   border: none;
   background-color: #E8F4E9;
-  color: white;
+  color: black;  
   border-radius: 5px;
 }
+
 
 .footer-nav {
   display: flex;
@@ -90,6 +80,7 @@ button {
   font-family: Arial, sans-serif;
 }
 
+
 .footer-nav nav a {
   text-decoration: none;
   color: #0077b5;
@@ -100,7 +91,8 @@ button {
   text-decoration: underline;
 }
 
-@media (max-width:480px) {
+
+@media (max-width: 480px) {
   .footer-nav {
     flex-direction: column;
     align-items: center;
